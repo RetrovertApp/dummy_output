@@ -91,7 +91,8 @@ static const char* s_targets[] = { "dummy audio" };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-RVOutputTargets dummyaudio_output_targets_info(void*) {
+RVOutputTargets dummyaudio_output_targets_info(void* data) {
+    (void)data;
     return (RVOutputTargets){ s_targets, 1 };
 }
 
