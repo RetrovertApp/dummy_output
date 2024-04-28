@@ -71,7 +71,7 @@ static void dummyaudio_start(void* user_data, RVPlaybackCallback* callback) {
     data->running = 1;
     data->channels = 2;
 
-    if (thrd_create(&data->thread, thread_callback, data) != thrd_success) {
+    if (thrd_create(&data->thread, thread_callback, data) <= 0) {
         rv_error("Unable to create thread");
         return;
     }
